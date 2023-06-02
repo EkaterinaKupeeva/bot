@@ -4,7 +4,9 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       Kupeeva Ekaterina
-// @match        https://ya.ru/
+// @match        https://ya.ru/*
+// @match        https://yandex.ru/*
+// @grant        GM_openInTab
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 
 // ==/UserScript==
@@ -30,7 +32,8 @@ if (name != null) {
         if (links[i].href.indexOf("wikipedia.org") != -1) {
             let link = links[i];
             console.log("Нашел строку " + link);
-            link.click();
+            let a = GM_openInTab(link.href);
+            a;
             break;
         }
     }
