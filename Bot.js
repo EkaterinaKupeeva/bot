@@ -30,7 +30,7 @@ if (name != null) {
         if (links[i].href.indexOf("wikipedia.org") != -1) {
             let link = links[i];
             console.log("Нашел строку " + link);
-            location.href = link.href;
+            link.click();
             break;
         }
     }
