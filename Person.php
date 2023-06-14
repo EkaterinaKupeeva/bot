@@ -57,7 +57,6 @@ class Person
     $this->getFather()->getFather()->getLastname() . "<br><h4>Мою бабушку по папе зовут: </h4>" . 
     $this->getFather()->getMother()->getName() . " " . 
     $this->getFather()->getMother()->getLastname();
-     //Вывести данные обо всей родне, включая бабушек и дедушек
   }
 }
 
@@ -70,10 +69,3 @@ $olga = new Person("Olga", "Petrova", 38, $nina, $alex);
 $marina = new Person("Marina", "Petrova", 10, $olga, $igor);
 
 echo $marina->getInfo();
-
-//Здоровье человека не может быть больше 100
-// $medKit = 50;
-// $alex->setHp(-30);//Упал
-// echo $alex->getHp() . "<br>";
-// $alex->setHp($medKit);//Нашел аптечку
-// echo $alex->getHp();
